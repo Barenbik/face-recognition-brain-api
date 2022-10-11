@@ -11,10 +11,8 @@ import image from './controllers/image.js'
 const db = knex({
   client: 'pg',
   connection: {
-    host: 'postgresql-reticulated-96372',
-    user: 'tonysharples',
-    password: '',
-    database: 'smart-brain',
+    host: process.env.DATABASE_URL,
+    ssl: true
   },
 })
 
